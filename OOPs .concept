@@ -1,0 +1,44 @@
+#include<iostream>
+using namespace std;
+class Student{   //user defined datatype
+public:
+      string name;
+      int rno;
+      float marks;
+    Student(string name,int rno, float marks ){         //constructor
+        // name =n;
+        // rno= r;
+        // marks = m;
+        this->name =name;        //    here {this} is pointer .whose contain a address..
+        this->rno=rno;
+        this->marks=marks;
+    }
+
+};
+
+void change(Student* s){
+    s->name="Harsh";
+}
+
+
+
+int main(){
+   Student* s = new Student("Avinash",79,96); // declaration with initialisation
+    // s.name = "Avinash Pal";
+//    s.rno  = 20;
+//    s.marks= 79.3;
+   //cout<<s.name<<endl<<s.rno<<endl<<s.marks<<endl;
+   cout<<s->name<<endl;            //  pointer ke through kiya hai
+   change(s);
+   cout<<s->name<<endl;
+
+//    Student* ptr= &s;
+//    cout<<s.name;
+//    cout<<endl;
+ //  (*ptr).name ="harsh";   //both method are best 
+//      ptr->name="sanket";
+//    cout<<s.name;
+
+
+
+}                          
