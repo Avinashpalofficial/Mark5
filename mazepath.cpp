@@ -36,6 +36,17 @@ int maze(int sr,int sc,int er,int ec){    //using four variable
          
       }
 
+         // print path using two variable
+        void printpath(int row,int column,string s){
+            if(row<1||column<1) return ;
+            if(row==1 && column==1){
+                cout<<s<<endl;
+                return ;
+            }
+            printpath(row,column-1,s+"R");
+            printpath(row-1,column,s+"D");
+        }
+
 
 
 int main(){
@@ -43,5 +54,7 @@ int main(){
     cout<<endl;
    cout<<maze2(3,3);
    cout<<endl;
-       printpath(1,1,3,3,"");                           
+       printpath(1,1,3,3,""); 
+       cout<<endl;
+          printpath(3,3,"");                          
 }
