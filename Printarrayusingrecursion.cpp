@@ -12,7 +12,10 @@ void display(int arr[],int n,int idx){
     if(idx==v.size()) return;
     cout<<v[idx]<<" ";
     display2(v,idx+1);
-}
+}   
+      
+
+
 int main(){
     int arr[]={1,2,3,4,5};
     int n=sizeof(arr)/sizeof(arr[0]);
@@ -28,13 +31,5 @@ int main(){
         //     v[i] =arr[i];
         // }
         //    display2(v,0);
-
-
-    //maximum value in an array
-    int max= -1; 
-    for(int i=0;i<n;i++){
-        if(max<arr[i]) max=arr[i];
-    }
-    cout<<max;
-
+       
 }
