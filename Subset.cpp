@@ -4,13 +4,12 @@
 using namespace std;
  
  void printsubset(string ans,string original,vector<string>&v){
-    if(original==" "){
-     cout<<ans<<"";
+    if(original==""){
+      v.push_back(ans);
       return;
     }
     char ch = original[0];
     printsubset(ans,original.substr(1),v);
-     v.push_back(ans);
     printsubset(ans+ch,original.substr(1),v);
  }
 int main(){
