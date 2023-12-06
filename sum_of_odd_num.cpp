@@ -6,11 +6,6 @@ using namespace std;
     return(curr+(curr+2,lastnum));
  }
  
-    
-        
-
-
- 
 int main(){
     int a;
     int b;
