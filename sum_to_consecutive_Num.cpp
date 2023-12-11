@@ -20,7 +20,5 @@ int main(){
           cin>>a[n];
      }
       print(a,n);
-     //for(auto x: a) cout<<x<<endl;
-     
-    
+     for(auto x: a) cout<<x<<endl;   
 }
